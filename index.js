@@ -13,19 +13,20 @@
 
 //3
 
-const name1 = "Igor";
+const name1 = prompt("Enter one of this names: Igor, Oleg, Olena, Nastya")
+const name11 = "Igor";
 const name2 = "Oleg";
 const name3 = "Olena";
 const name4 = "Nastya";
 
 switch(name1){
-    case "Igor":
-        console.log("male");
-    case "Oleg":
-        console.log("male");
-    case "Olena":
-        console.log("female");
-    case "Nastya":
-        console.log("female");
+    case name11:
+        alert("male");
+    case name2:
+        alert("male");
+    case name3:
+        alert("female");
+    case name4:
+        alert("female");
 }
 
