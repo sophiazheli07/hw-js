@@ -1,27 +1,44 @@
 const rateButtonOne = document.querySelector("#rate-one");
-// rateButtonTwo = document.querySelector("#rate-two");
-// rateButtonThree = document.querySelector("#rate-three");
-// rateButtonFour = document.querySelector("#rate-four");
-// rateButtonFive = document.querySelector("#rate-five");
-// rateButtonSix = document.querySelector("#rate-six");
-// rateButtonSeven = document.querySelector("#rate-seven");
-// rateButtonEight = document.querySelector("#rate-eight");
-// rateButtonNine = document.querySelector("#rate-nine");
-// rateButtonTen = document.querySelector("#rate-ten");
+const rateButtonTwo = document.querySelector("#rate-two");
+const rateButtonThree = document.querySelector("#rate-three");
+const rateButtonFour = document.querySelector("#rate-four");
+const rateButtonFive = document.querySelector("#rate-five");
+const Rates = [];
 
-// allRateButtons = document.querySelectorAll("button");
-
-// const Rates = [];
 rateButtonOne.onclick = () => {
-    alert("!")
+    const rate = rateButtonOne.value;
+
+    const UserRate = {rate};
+    Rates.push(UserRate)
 }
 
-// rateButtonOne.onclick = () => {
-//     // const rate = rate.value
-//     // console.log(rate);
+rateButtonTwo.onclick = () => {
+    const rate = rateButtonTwo.value;
 
-//     // const ante = {rate};
-//     // Rates.push(ante);
-// }
+    const UserRate = {rate};
+    Rates.push(UserRate)
+}
 
-// console.log(Rates)
+rateButtonThree.onclick = () => {
+    const rate = rateButtonThree.value;
+
+    const UserRate = {rate};
+    Rates.push(UserRate)
+}
+
+rateButtonFour.onclick = () => {
+    const rate = rateButtonFour.value;
+
+    const UserRate = {rate};
+    Rates.push(UserRate)
+}
+
+rateButtonFive.onclick = () => {
+    const rate = rateButtonFive.value;
+
+    const UserRate = {rate};
+    Rates.push(UserRate)
+}
+
+console.log(Rates)
+
