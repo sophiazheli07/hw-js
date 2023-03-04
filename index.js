@@ -3,7 +3,14 @@ const rateButtonTwo = document.querySelector("#rate-two");
 const rateButtonThree = document.querySelector("#rate-three");
 const rateButtonFour = document.querySelector("#rate-four");
 const rateButtonFive = document.querySelector("#rate-five");
+const mainButton = document.querySelector("#main-btn");
+const popupButton = document.querySelector(".popup")
+const coverElement = document.querySelector(".cover")
 const Rates = [];
+
+mainButton.onclick = () => {
+    window.location = "index.html"
+}
 
 rateButtonOne.onclick = () => {
     const rate = rateButtonOne.value;
@@ -39,6 +46,7 @@ rateButtonFive.onclick = () => {
     const UserRate = {rate};
     Rates.push(UserRate)
 }
+
 
 console.log(Rates)
 

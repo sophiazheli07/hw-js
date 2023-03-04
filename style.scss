@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap');
+@import 'mixins';
+*,body,html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+}
+body{
+    background: #00425E;
+}
+header{
+    @include fc();
+    padding-top: 40px;
+}
+button{
+    font-size: 40px;
+    font-weight: 700;
+
+    color: white;
+    border-radius: 50%;
+    border: 9px solid white;
+    text-align: center;
+    background: none;
+    margin-right: 77px;
+    transition: transform 300ms;
+}
+button:hover{
+    transform: translateY(-15px);
+}
+#rate-one{
+    width: 80px;
+    height: 80px;
+    margin-bottom: -80px;
+}
+#rate-two{
+    width: 100px;
+    height: 100px;
+    margin-bottom: -60px;
+}
+#rate-three{
+    width: 120px;
+    height: 120px;
+    margin-bottom: -40px;
+}
+#rate-four{
+    width: 140px;
+    height: 140px;
+    margin-bottom: -20px;
+}
+#rate-five{
+    width: 160px;
+    height: 160px;
+}
+main{   
+    @include fc();
+    margin-top: 120px;
+}
+.main-text{
+
+    color: white;
+    font-size: 60px;
+    font-weight: 700;
+    text-align: center;
+    margin-top: 120px;
+    letter-spacing: 4px;
+}
+#main-btn{
+    all: unset;
+    color: #011d29;
+    font-weight: 700;
+    width: 800px;
+    height: 200px;
+    background: #000;
+    @include fc();
+    font-size: 80px;
+    border-radius: 85px;
+    background: white;
+}
+
+//POPUP
+
+.popup h1{
+    text-transform: uppercase;
+    color: #011d29;
+    font-weight: 700;
+    width: 700px;
+    height: 150px;
+    font-size: 45px;
+    border-radius: 85px;
+    background: white;
+    @include fc();
+}
+.popup {
+    visibility: hidden;
+    @include fc();
+    position: relative;
+    top: -200px;
+    z-index: 5;
+}
+.cover {
+    background-color:black;
+    opacity: 0.6;
+    width:100%;
+    height:100%;
+    position:fixed;
+    z-index:3;
+    display: none;
+}
