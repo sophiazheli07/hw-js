@@ -3,21 +3,20 @@ const rateButtonTwo = document.querySelector("#rate-two");
 const rateButtonThree = document.querySelector("#rate-three");
 const rateButtonFour = document.querySelector("#rate-four");
 const rateButtonFive = document.querySelector("#rate-five");
-const mainButton = document.querySelector("#main-btn");
+
 const openModalButton = document.querySelectorAll("[data-modal-target]");
 const closeModalButton = document.querySelectorAll("[data-close-button]")
 const overlay = document.getElementById("overlay")
 const Rates = [];
 
-// mainButton.onclick = () => {
-//     window.location = "index.html"
-// }
+
 
 rateButtonOne.onclick = () => {
     const rate = rateButtonOne.value;
 
     const UserRate = {rate};
     Rates.push(UserRate)
+    sendFeedback(rate)
 }
 
 rateButtonTwo.onclick = () => {
@@ -25,6 +24,7 @@ rateButtonTwo.onclick = () => {
 
     const UserRate = {rate};
     Rates.push(UserRate)
+    sendFeedback(rate)
 }
 
 rateButtonThree.onclick = () => {
@@ -32,6 +32,7 @@ rateButtonThree.onclick = () => {
 
     const UserRate = {rate};
     Rates.push(UserRate)
+    sendFeedback(rate)
 }
 
 rateButtonFour.onclick = () => {
@@ -39,6 +40,7 @@ rateButtonFour.onclick = () => {
 
     const UserRate = {rate};
     Rates.push(UserRate)
+    sendFeedback(rate)
 }
 
 rateButtonFive.onclick = () => {
@@ -46,6 +48,15 @@ rateButtonFive.onclick = () => {
 
     const UserRate = {rate};
     Rates.push(UserRate)
+    sendFeedback(rate)
+}
+
+function sendFeedback(score) {
+    fetch("http://localhost:3000/feedbacks", {body: {score}, method: "POST"}).then(() => {
+        console.log("data sent")
+    }).catch(() => {
+        console.log("error")
+    })
 }
 
 
@@ -67,6 +78,7 @@ closeModalButton.forEach(button => {
     button.addEventListener('click', () => {
         const modal = button.closest('.modal')
         closeModal(modal)
+        window.location.href = "main.html"
     })
 })
 function openModal(modal) {
