@@ -4,13 +4,14 @@ const rateButtonThree = document.querySelector("#rate-three");
 const rateButtonFour = document.querySelector("#rate-four");
 const rateButtonFive = document.querySelector("#rate-five");
 const mainButton = document.querySelector("#main-btn");
-const popupButton = document.querySelector(".popup")
-const coverElement = document.querySelector(".cover")
+const openModalButton = document.querySelectorAll("[data-modal-target]");
+const closeModalButton = document.querySelectorAll("[data-close-button]")
+const overlay = document.getElementById("overlay")
 const Rates = [];
 
-mainButton.onclick = () => {
-    window.location = "index.html"
-}
+// mainButton.onclick = () => {
+//     window.location = "index.html"
+// }
 
 rateButtonOne.onclick = () => {
     const rate = rateButtonOne.value;
@@ -46,6 +47,47 @@ rateButtonFive.onclick = () => {
     const UserRate = {rate};
     Rates.push(UserRate)
 }
+
+
+openModalButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = document.querySelector(button.dataset.modalTarget)
+        openModal(modal)
+    })
+})
+
+overlay.addEventListener('click', () => {
+    const Modals = document.querySelectorAll(".modal.active")
+    Modals.forEach(modal => {
+        closeModal(modal)
+    })
+})
+
+closeModalButton.forEach(button => {
+    button.addEventListener('click', () => {
+        const modal = button.closest('.modal')
+        closeModal(modal)
+    })
+})
+function openModal(modal) {
+    if (modal == null) return
+    modal.classList.add('active')
+    overlay.classList.add('active')
+}
+function closeModal(modal) {
+    if (modal == null) return
+    modal.classList.remove('active')
+    overlay.classList.remove('active')
+}
+
+
+// closeModalButton.forEach(btn => {
+//     btn.addEventListener('click', () => {
+//         const modal = document.querySelector('.popup')
+//         closeModal(modal)
+//     })
+
+// })
 
 
 console.log(Rates)
