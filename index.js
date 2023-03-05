@@ -95,14 +95,7 @@ function closeModal(modal) {
   if (modal == null) return;
   modal.classList.remove("active");
   overlay.classList.remove("active");
+  window.location.href = "main.html";
 }
-
-// closeModalButton.forEach(btn => {
-//     btn.addEventListener('click', () => {
-//         const modal = document.querySelector('.popup')
-//         closeModal(modal)
-//     })
-
-// })
 
 console.log(Rates);
