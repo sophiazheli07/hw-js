@@ -19,7 +19,7 @@ const arr2 = [
     {city: "dnipro"}
 ];
 
-console.log(arr2.every((el) =>el.city[0] === el.city[0].toUpperCase()))
+console.log(arr2.every((el) => el.city[0] === el.city[0].toUpperCase()))
 
 // 3
 
