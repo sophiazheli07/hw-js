@@ -1,0 +1,15 @@
+.wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 70px;
+    
+}
+h1{
+    margin-right: 200px;
+}
+li{
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 500;
+}
