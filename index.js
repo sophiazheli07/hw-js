@@ -43,3 +43,5 @@ promise.then((data) => {
         dataEl.appendChild(listItem);
 			}
 });
+
+// event loop
